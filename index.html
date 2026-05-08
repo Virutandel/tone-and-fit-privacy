@@ -127,6 +127,14 @@
             margin-bottom: 0;
         }
 
+        .section h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #d0d0d0;
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }
+
         .bullet-list {
             padding-left: 8px;
             margin-bottom: 12px;
@@ -162,6 +170,7 @@
             font-weight: 600;
             color: #ffffff;
             margin-bottom: 8px;
+            margin-top: 0;
         }
 
         .contact-card p {
@@ -217,7 +226,7 @@
             </div>
             <h1>Privacy Policy</h1>
             <p>Tone &amp; Fit is designed with your privacy in mind. Here's how we handle your data.</p>
-            <span class="effective-date">Effective Date: February 8, 2026</span>
+            <span class="effective-date">Effective Date: May 8, 2026</span>
         </div>
 
         <div class="section">
@@ -230,8 +239,62 @@
                 </div>
                 <h2>Information Collection</h2>
             </div>
-            <p>Tone &amp; Fit does not require account creation and does not collect personal information such as your name, email, or phone number.</p>
-            <p>When you use the app, you may take or upload a photo for color analysis. These images are transmitted securely to a third-party AI service solely for the purpose of analyzing your skin tone and providing personalized color recommendations.</p>
+            <p>Tone &amp; Fit does not require account creation. We do not collect your name, phone number, or any other personally identifying information beyond what is described below.</p>
+            <p>The data we may collect during your use of the app is limited to:</p>
+            <div class="bullet-list">
+                <div class="bullet-item">Your selfie photo, used solely to perform color analysis (see "Face Data Collection and Use" below).</div>
+                <div class="bullet-item">Your email address, only if you choose to provide it after your first free scan in order to extend your free-scan allotment (see "Email Collection" below).</div>
+                <div class="bullet-item">Anonymous purchase identifiers managed by Apple and RevenueCat, used to track your one-time purchase entitlement.</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M4 7V5a2 2 0 0 1 2-2h2"/>
+                        <path d="M16 3h2a2 2 0 0 1 2 2v2"/>
+                        <path d="M20 17v2a2 2 0 0 1-2 2h-2"/>
+                        <path d="M8 21H6a2 2 0 0 1-2-2v-2"/>
+                        <circle cx="9" cy="10" r="1"/>
+                        <circle cx="15" cy="10" r="1"/>
+                        <path d="M9 16c.5.5 1.5 1 3 1s2.5-.5 3-1"/>
+                    </svg>
+                </div>
+                <h2>Face Data Collection and Use</h2>
+            </div>
+            <p>Tone &amp; Fit uses your selfie photo to perform AI-driven color analysis (skin tone, undertone, contrast, and seasonal palette identification). This is the only purpose for which your face data is collected.</p>
+
+            <h3>Storage on your device</h3>
+            <p>Your scan photo and analysis results are stored locally on your device in secure local storage. Face data is retained on your device only until you take a new scan (which replaces the previous one), reset the app, or delete the app. You can delete all stored face data at any time by deleting the app from your device or by contacting us at the email address below.</p>
+
+            <h3>Server-side processing</h3>
+            <p>When you take a scan, your photo is transmitted to our backend (hosted on Cloudflare Workers), which acts as a relay only — your face data is NOT retained, persisted, logged, or stored on our servers in any form. The photo is forwarded to Google's Gemini API for visual analysis, and only the categorical results (e.g. "Soft Summer", "cool undertone") are returned and stored on your device. The image itself is discarded server-side as soon as the relay completes.</p>
+
+            <h3>Third-party sharing</h3>
+            <p>We share your face data only with Google's Gemini API, and only for the purpose of performing color analysis. Per Google's published Gemini API data policy for paid usage, API inputs (including images) are not used to train Google's models, and may be retained by Google for up to 24 hours for abuse monitoring before being permanently deleted. We do not share your face data with any other third party.</p>
+            <p>We do not sell, rent, or otherwise share your face data with advertisers, data brokers, analytics providers, or any other parties.</p>
+
+            <h3>Retention summary</h3>
+            <div class="bullet-list">
+                <div class="bullet-item">On our servers (Cloudflare Workers): not retained at all (relay only).</div>
+                <div class="bullet-item">On Google's servers (Gemini API): up to 24 hours for abuse monitoring, then permanently deleted; never used to train models.</div>
+                <div class="bullet-item">On your device: until you take a new scan, reset the app, or delete the app.</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="3" y="5" width="18" height="14" rx="2"/>
+                        <path d="M3 7l9 6 9-6"/>
+                    </svg>
+                </div>
+                <h2>Email Collection</h2>
+            </div>
+            <p>If you choose to provide your email address after your first free scan in order to extend your free-scan allotment, your email is stored on our backend (Cloudflare KV, a key-value storage service) for the sole purpose of remembering that you have extended your free allotment.</p>
+            <p>We do not share your email with advertisers, data brokers, marketing partners, or any other third party. We do not use your email to send you marketing communications unless you separately opt in. You can request deletion of your email at any time by contacting us at the email address at the bottom of this policy.</p>
         </div>
 
         <div class="section">
@@ -245,8 +308,8 @@
                 </div>
                 <h2>Data Usage &amp; Storage</h2>
             </div>
-            <p>Images you provide are used exclusively for extracting color analysis data. They are not stored on our servers, linked to any user identity, or used for marketing, profiling, or any other purpose.</p>
-            <p>Analysis results are stored locally on your device so you can access them later. This data never leaves your device unless you choose to share it.</p>
+            <p>Your color analysis results are stored locally on your device so you can access them later. These results never leave your device unless you choose to share them.</p>
+            <p>We do not link your analysis results to any user identity on our servers. We do not use your data for marketing, profiling, or any purpose other than what is described in this policy.</p>
         </div>
 
         <div class="section">
@@ -263,9 +326,10 @@
             </div>
             <p>The app uses the following third-party services:</p>
             <div class="bullet-list">
-                <div class="bullet-item">AI processing service — for analyzing your photo and generating personalized color recommendations.</div>
-                <div class="bullet-item">RevenueCat — for managing in-app purchases. RevenueCat may collect anonymous purchase data. See their <a href="https://www.revenuecat.com/privacy" style="color: #e94560;">privacy policy</a> for details.</div>
-                <div class="bullet-item">Apple App Store — for processing payments. Apple's standard terms apply.</div>
+                <div class="bullet-item"><strong style="color:#d0d0d0;">Google Gemini API</strong> — for AI-driven color analysis of your selfie photo. Per Google's published API data policy for paid usage, inputs are not used for model training and may be retained up to 24 hours for abuse monitoring before deletion. See Google's <a href="https://ai.google.dev/gemini-api/terms" style="color: #e94560;">Gemini API terms</a>.</div>
+                <div class="bullet-item"><strong style="color:#d0d0d0;">Cloudflare Workers</strong> — for hosting our backend relay. Cloudflare may collect basic request metadata (such as IP addresses) for security and abuse-prevention purposes; we do not retain your photos or face data on Cloudflare. See Cloudflare's <a href="https://www.cloudflare.com/privacypolicy/" style="color: #e94560;">privacy policy</a>.</div>
+                <div class="bullet-item"><strong style="color:#d0d0d0;">RevenueCat</strong> — for managing in-app purchases. RevenueCat may collect anonymous purchase data and a per-device identifier. See their <a href="https://www.revenuecat.com/privacy" style="color: #e94560;">privacy policy</a>.</div>
+                <div class="bullet-item"><strong style="color:#d0d0d0;">Apple App Store</strong> — for processing payments. Apple's standard terms apply.</div>
             </div>
             <p>We do not sell, rent, or share your data with any other third parties.</p>
         </div>
